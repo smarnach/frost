@@ -73,7 +73,8 @@ placing it into the PyTest cache. The client module typically exposes the data v
 “{service}_client” object. The PyTest framework will instantiate the client
 before any tests are run with all the configuration &amp; credential
 information provided by the configuration files and command line
-options. (See <a class="reference internal" href="Architecture.html#architecture"><span class="std std-ref">Architecture</span></a> for status of cache functionality.)</p>
+options. (See <a class="reference internal" href="Architecture.html#architecture"><span class="std std-ref">Architecture</span></a> for status of cache functionality.) (See
+<a class="reference internal" href="CodingConventions.html#offline"><span class="std std-ref">doctest offline support</span></a> for other requirements.)</p>
 <p><code class="docutils literal notranslate"><span class="pre">resources.py</span></code>: holds mapping functions which convert the data from
 the cache into the format expected by the tests. This should be the only
 file which imports the instantiation of the client. (Future best

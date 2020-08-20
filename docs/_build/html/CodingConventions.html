@@ -44,6 +44,15 @@ have <a class="reference external" href="https://docs.python.org/3.6/library/doc
 in <code class="docutils literal notranslate"><span class="pre">pytest.mark.parametrize</span></code> contain sufficient information for downstream
 processing.</p></li>
 </ul>
+<ul id="offline">
+<li><p>All data access routines should respect the <code class="docutils literal notranslate"><span class="pre">--offline</span></code> command line option
+that is a <code class="docutils literal notranslate"><span class="pre">frost</span></code> extension. The value of <code class="docutils literal notranslate"><span class="pre">--offline</span></code> is passed as a value to
+the “client” constructor.</p>
+<p>If you do not properly implement this option, you will break “<code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">doctest</span></code>” for
+everything. (I.e. you’re advised to run “<code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">doctest</span></code>” early &amp; often while
+implementing a new service.)</p>
+</li>
+</ul>
 </div>
 
 
